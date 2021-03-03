@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "Issue")
+@Table(name = "issue")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

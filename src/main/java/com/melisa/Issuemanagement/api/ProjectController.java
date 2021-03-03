@@ -2,12 +2,12 @@ package com.melisa.Issuemanagement.api;
 
 import com.melisa.Issuemanagement.dto.ProjectDto;
 import com.melisa.Issuemanagement.service.impl.ProjectServiceImpl;
+import com.melisa.Issuemanagement.util.ApiPaths;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/project")
+@RequestMapping(ApiPaths.ProjectCtrl.CTRL)
 public class ProjectController {
     private final ProjectServiceImpl projectServiceImpl;
 
