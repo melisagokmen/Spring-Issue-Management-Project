@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+
 @SpringBootApplication
 public class IssueManagementApplication {
 
@@ -15,10 +16,11 @@ public class IssueManagementApplication {
 	}
 
 	@Bean
-	public ModelMapper getModelMapper() {
-		ModelMapper modelMapper=new ModelMapper();
-		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-		return new ModelMapper();
+	public ModelMapper modelMapper() {
+		ModelMapper modelMapper = new ModelMapper();
+		modelMapper.getConfiguration()
+				.setMatchingStrategy(MatchingStrategies.STRICT);
+		return modelMapper;
 	}
 
 }

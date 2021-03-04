@@ -1,6 +1,5 @@
 package com.melisa.Issuemanagement.api;
 
-
 import com.melisa.Issuemanagement.dto.IssueDto;
 import com.melisa.Issuemanagement.service.impl.IssueServiceImpl;
 import com.melisa.Issuemanagement.util.ApiPaths;
@@ -23,7 +22,7 @@ public class IssueController {
     }
 
     @PostMapping
-    public ResponseEntity<IssueDto> createProject(@RequestBody IssueDto project) {
+    public ResponseEntity<IssueDto> createPost(@RequestBody IssueDto project) {
         return ResponseEntity.ok(issueServiceImpl.save(project));
     }
 
