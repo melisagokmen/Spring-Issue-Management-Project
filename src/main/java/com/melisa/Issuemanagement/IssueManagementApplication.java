@@ -5,9 +5,13 @@ import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 @SpringBootApplication
+@EnableSwagger2
+@EnableWebMvc
 public class IssueManagementApplication {
 
 	public static void main(String[] args) {
@@ -16,7 +20,7 @@ public class IssueManagementApplication {
 	}
 
 	@Bean
-	public ModelMapper modelMapper() {
+	public ModelMapper getModelMapper() {
 		ModelMapper modelMapper = new ModelMapper();
 		modelMapper.getConfiguration()
 				.setMatchingStrategy(MatchingStrategies.STRICT);
